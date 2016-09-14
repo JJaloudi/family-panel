@@ -32,7 +32,7 @@ function Family:Think()
 	if (CurTime() - self.lastCheck > 0.1 && self.CapturedPress) then
 		local currentPosition = {x = gui.MouseX(), y = gui.MouseY()}
 		xDist, yDist = self.CapturedPress.x - currentPosition.x, self.CapturedPress.y - currentPosition.y
-		xSpeed, ySpeed = (xDist * 10) / 10, (yDist * 10) / 10
+		xSpeed, ySpeed = (xDist * 10), (yDist * 10)
 		
 		self.CapturedPress = currentPosition
 		
